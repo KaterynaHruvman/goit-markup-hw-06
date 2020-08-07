@@ -670,7 +670,8 @@ header {
 }
 .modal-svg {
   position: absolute;
-  transform: translateX(50%);
+  display: inline-block;
+  transform: translate(15px, -25px);
 }
 
 .modal-form-title {
@@ -680,7 +681,6 @@ header {
   font-weight: bold;
   font-size: 20px;
   line-height: 23px;
-  text-align: center;
   letter-spacing: 0.03em;
 }
 
@@ -690,6 +690,7 @@ header {
 }
 
 .modal-form-input {
+  position: relative;
   height: 30px;
   padding-left: 46px;
   border-radius: 4px;
@@ -722,6 +723,12 @@ header {
   letter-spacing: 0.1em;
   border: none;
   background-color: transparent;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
   border: 1px solid rgba(157, 164, 189, 0.4);
 }
 
@@ -756,6 +763,9 @@ header {
   transform: translateY(-30px);
   color: var(--accent-color);
 }
+.modal-form-input:focus .modal-svg {
+  fill: var(--accent-color);
+}
 
 .modal-form-checkbox {
   position: absolute;
@@ -776,9 +786,7 @@ header {
 
 .modal-form-custom-checkbox {
   display: inline-block;
-  width: 16px;
-  height: 16px;
-  outline: 1px solid #000;
+  overflow: hidden;
   margin-right: 10px;
 }
 
@@ -792,7 +800,6 @@ header {
 
 .modal-form-checkbox:checked + .modal-form-custom-checkbox {
   background-color: var(--accent-color);
-  border: 4px solid #fff;
 }
 
 .modal-form-btn {
@@ -804,9 +811,9 @@ header {
   line-height: 30px;
   background-color: #188ce8;
   padding-top: 10px;
-  padding-right: 20px;
-  padding-bottom: 12px;
-  padding-left: 20px;
+  padding-right: 56px;
+  padding-bottom: 10px;
+  padding-left: 55px;
   cursor: pointer;
   position: absolute;
   top: 90%;
@@ -814,7 +821,6 @@ header {
   width: 200px;
   height: 50px;
   color: var(--light-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   transition: background-color 250ms linear, color 250ms linear;
 }
@@ -830,18 +836,16 @@ header {
   visibility: hidden;
   pointer-events: none;
 }
-
-.modal-close-btn {
+.modal-svg-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background-color: transparent;
-  border: 1px solid #000;
+  transform: translate(430px, -40px);
+}
+.modal-close-btn {
   cursor: pointer;
+  position: absolute;
+  transform: translate(400px, -40px);
   transition: color 250ms linear;
+  overflow: hidden;
 }
 
 .modal-close-btn:hover {
