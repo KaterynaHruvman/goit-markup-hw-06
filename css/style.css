@@ -727,7 +727,7 @@ header {
 .modal-form-input {
   position: relative;
   height: 30px;
-  padding-left: 46px;
+  padding: 12px 18px 12px 42px;
   border-radius: 4px;
   border-color: var(--second-font-color);
 }
