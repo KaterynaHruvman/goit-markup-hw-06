@@ -758,7 +758,7 @@ header {
   letter-spacing: 0.1em;
   border: none;
   background-color: transparent;
-  font-family: Roboto;
+  font-family: var(--main-font);
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -794,7 +794,7 @@ header {
 
 .modal-form-input:focus + .modal-form-label,
 .modal-form-input:not(:placeholder-shown) + .modal-form-label {
-  transform: translateY(-45px);
+  transform: translate(-30px, -40px);
   color: var(--accent-color);
 }
 .modal-form-input:focus ~ .modal-svg {
@@ -803,13 +803,8 @@ header {
 
 .modal-form-checkbox {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
+  margin-right: ;
   padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .modal-form-option-label {
@@ -820,8 +815,9 @@ header {
 
 .modal-form-custom-checkbox {
   display: inline-block;
+  width: 16px;
+  height: 15px;
   overflow: hidden;
-  margin-right: 10px;
 }
 
 .modal-form-option-span {
@@ -833,15 +829,12 @@ header {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-
 .modal-form-option-span a {
-  color: #3498db;
+  color: var(--accent-color);
 }
-
-.modal-form-checkbox:checked + .modal-form-custom-checkbox {
-  background-color: var(--accent-color);
+.modal-form-checkbox:checked ~ .svg-checkbox {
+  fill: var(--accent-color);
 }
-
 .modal-form-btn {
   letter-spacing: 0.09em;
   font-family: var(--main-font);
@@ -878,21 +871,22 @@ header {
 }
 .modal-svg-btn {
   position: absolute;
-  transform: translate(430px, -40px);
+  transform: translate(-10px, -10px);
 }
 .modal-close-btn {
-  display: flex;
-  height: 30px;
-  width: 30px;
-  border-radius: 50px;
-  border-color: #000000;
-  background: #fff;
-  cursor: pointer;
-  border: 1px solid rgba(163, 86, 86, 0.1);
   position: absolute;
-  transform: translate(400px, -40px);
+  top: 10px;
+  right: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  align-items: center;
+  cursor: pointer;
   transition: color 250ms linear;
-  overflow: hidden;
+  background: var(--light-text-color);
+  margin: 0;
+  border: 1px solid rgba(163, 86, 86, 0.1);
 }
 
 .modal-close-btn:hover {
