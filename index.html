@@ -489,8 +489,23 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="footer-subskribe">
           <b class="footer-title">Подпишитесь на рассылку</b>
+          <form action="#" method="GET" class="contact-form">
+            <input
+              type="email"
+              class="contact-form-input"
+              name="user-email"
+              placeholder="E-mail*"
+              required
+            />
+            <button type="submit" class="footer-subskribe-button">
+              Подписаться
+              <svg class="footer-subskribe-button-svg" width="24" height="24">
+                <use href="./images/symbol-defs2.svg#icon-icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
@@ -569,7 +584,8 @@
             </svg>
           </span>
           <span class="modal-form-option-span"
-            >Я согласен с <a href="#">политикой коинфеинденциальности</a></span
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="#">Условия договора</a></span
           >
         </label>
         <button type="submit" class="modal-form-btn">Отправить</button>
