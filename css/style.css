@@ -819,8 +819,6 @@ header {
 
 .modal-form-custom-checkbox {
   display: inline-block;
-  width: 16px;
-  height: 15px;
   overflow: hidden;
   background-color: var(--light-text-color);
   margin-right: 7px;
