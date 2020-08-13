@@ -698,7 +698,6 @@ header {
 .modal-form {
   position: relative;
   max-width: 528px;
-
   background-color: #fff;
   padding: 40px;
 }
@@ -725,8 +724,8 @@ header {
 
 .modal-form-input {
   position: relative;
-  height: 30px;
   padding: 12px 18px 12px 42px;
+  height: 40px;
   border-radius: 4px;
   border-color: var(--second-font-color);
 }
@@ -743,7 +742,10 @@ header {
 .modal-form-message {
   height: 120px;
   margin-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 16px;
+  padding-right: 16px;
   resize: none;
 }
 
@@ -881,13 +883,11 @@ header {
 }
 .modal-close-btn {
   position: absolute;
-  top: 18%;
-  right: 33%;
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  display: block;
-  align-items: center;
   cursor: pointer;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background: var(--light-text-color);
@@ -899,4 +899,7 @@ header {
 .modal-close-btn:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
+}
+.modal {
+  position: relative;
 }
